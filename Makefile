@@ -22,7 +22,8 @@ $(LIBFT):
 	make -s -C $(LIBFT_PATH)
 
 $(NAME):	$(OBJ)
-	$(CC) $(CGLAGS) $(OBJ) -o $(NAME)
+	$(CC) $(CFLAGS) $(LIBFT) $(OBJ) -o $(NAME)
+
 %.o:	%.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
