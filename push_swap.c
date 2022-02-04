@@ -26,6 +26,7 @@ static void	push_all_to_b(t_env *env)
 {
 	int	c;
 
+	if (env->a_size != 5)
 	while (env->a_size > 3)
 	{
 		c = env->a_stack->content;

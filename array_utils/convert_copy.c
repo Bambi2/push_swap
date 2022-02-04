@@ -1,24 +1,5 @@
 #include "array_utils.h"
 
-static char	*copy_str(char *src)
-{
-	int		first_word_length;
-	int		i;
-	char	*new_string;
-
-	first_word_length = ft_strlen(src);
-	new_string = (char *) malloc(first_word_length + 1);
-	if (!new_string)
-		return (NULL);
-	i = 0;
-	while (src[i])
-	{
-		new_string[i] = src[i];
-		i++;
-	}
-	return (new_string);
-}
-
 //get a new array copied from arr
 int	*copy_arr(int *arr, int length)
 {
@@ -69,7 +50,7 @@ char	**transform_array(int argc, char **argv)
 	i = 2;
 	if (argc == 1)
 		return (NULL);
-	new_string = copy_str(argv[1]);
+	new_string = ft_strdup(argv[1]);
 	if (!new_string)
 		return (NULL);
 	while (i < argc)

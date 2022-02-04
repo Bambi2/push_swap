@@ -30,6 +30,7 @@ void	count_rb_score(t_env *env)
 	{
 		temp->rb_score = score;
 		temp->rrb_score = env->b_size - score;
+		score++;
 		temp = temp->next;
 	}
 }
