@@ -26,7 +26,6 @@ static void	push_all_to_b(t_env *env)
 {
 	int	c;
 
-	if (env->a_size != 5)
 	while (env->a_size > 3)
 	{
 		c = env->a_stack->content;
@@ -92,6 +91,11 @@ void	push_swap(int *arr, int *arr_sorted, int length)
 	env = set_environment(arr, arr_sorted, length);
 	if (!env)
 		return ;
+	if (length == 5)
+	{
+		sort_five(env);
+		return ;
+	}
 	push_all_to_b(env);
 	sort_three(env);
 	while (env->b_size != 0)

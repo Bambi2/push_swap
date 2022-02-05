@@ -6,7 +6,8 @@ LIBFT		=	$(LIBFT_PATH)libft.a
 
 SRCS		=	score_counting.c			push_swap.c					push_swap_actions.c\
 				push_swap_actions_plus.c	moving.c					main.c\
-				input_check.c				array_utils/convert_copy.c	array_utils/sort_check_arr.c
+				input_check.c				array_utils/convert_copy.c	array_utils/sort_check_arr.c\
+				sort_five.c
 
 OBJ			=	$(SRCS:%.c=%.o)
 

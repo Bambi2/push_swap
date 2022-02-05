@@ -46,4 +46,7 @@ void	rra_rb_type_move(t_env *env, t_list *min_element);
 //last move
 void	rotate_a(t_env *env);
 
+//sort five
+void	sort_five(t_env *env);
+
 #endif
